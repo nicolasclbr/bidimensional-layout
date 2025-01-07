@@ -1,0 +1,70 @@
+{
+    "buildings": [
+      {
+        "name": "Building 1",
+        "type": "Production",
+        "dimensions": [
+          2800,
+          3300
+        ]
+      },
+      {
+        "name": "Building 2",
+        "type": "Logistic",
+        "dimensions": [
+          600,
+          850
+        ]
+      },
+      {
+        "name": "Building 3",
+        "type": "Storage",
+        "dimensions": [
+          1500,
+          2450
+        ]
+      },
+      {
+        "name": "Building 4",
+        "type": "Office",
+        "dimensions": [
+          400,
+          750
+        ]
+      }
+    ],
+    "paths": [
+      {
+        "name": "Path 1",
+        "between": [
+          "Building 1",
+          "Building 2"
+        ],
+        "width": 2,
+        "min_length": 10,
+        "max_length": 150,
+        "type": "walk"
+      },
+      {
+        "name": "Path 2",
+        "between": [
+          "Building 3",
+          "Building 4"
+        ],
+        "width": 4,
+        "min_length": 100,
+        "max_length": 1000,
+        "type": "road"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "objective 1",
+        "desc": "minimize lengths of paths"
+      },
+      {
+        "name": "objective 2",
+        "desc": "minimize comprehensive area used (red rectangular in figure below)"
+      }
+    ]
+  }
