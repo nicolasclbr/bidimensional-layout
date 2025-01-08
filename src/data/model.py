@@ -27,4 +27,5 @@ class LayoutData:
     buildings: List[Building]
     paths: List[Path]
     objectives: List[Objective]
+    site_area: float = 0.0
 

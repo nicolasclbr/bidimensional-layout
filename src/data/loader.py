@@ -10,7 +10,7 @@ def load_data(json_path: Union[str, Path]) -> LayoutData:
 
     """
     The loader is fed from the JSON file and returns a LayoutData object 
-    with the lists of buildings, roads and targets. Besides, an unique 'id' 
+    with the lists of buildings, roads, objectives, and site_area. Besides, an unique 'id' 
     is assigned to each building.
     """
 
@@ -55,14 +55,24 @@ def load_data(json_path: Union[str, Path]) -> LayoutData:
     for o in objectives_list:
         objective = Objective(
             name=o["name"],
-            description=o["description"]
+            description=o["desc"]
         )
         objectives.append(objective)
-    
+
+    site_area = data.get("site_area", None)
+    if site_area is None:
+        sum_building_area = 0.0
+        for b in buildings:
+            w, h = b.dimensions
+            sum_building_area += (w * h)
+        site_area = sum_building_area * 4
+
+
     #final object
     layout_data = LayoutData(
         buildings=buildings,
         paths=paths,
-        objectives=objectives
+        objectives=objectives,
+        site_area=site_area
     )
     return layout_data
