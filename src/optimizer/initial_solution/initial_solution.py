@@ -79,7 +79,7 @@ def generate_initial_solution(layout_data: LayoutData) -> Dict[str, Any]:
     utilization_factor = used_area / layout_data.site_area if layout_data.site_area else 0
 
     return {
-        "positions": positions,  # {building_id: (x, y), ...}
+        "positions": positions, 
         "distance_matrix": distance_matrix,
         "total_distance_paths": total_distance_paths,
         "used_area": used_area,

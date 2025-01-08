@@ -4,7 +4,7 @@ from data.model import LayoutData
 
 def plot_initial_layout(solution: dict, layout_data: LayoutData):
     """
-    Plot the initial layout of the buildings
+    This function plots the initial layout of the buildings
     """
     site_area = layout_data.site_area
     side = math.sqrt(site_area)
