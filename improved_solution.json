@@ -1,0 +1,72 @@
+{
+  "arrangement_id": 2,
+  "buildings": [
+    {
+      "name": "Building 1",
+      "location": [
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        2800,
+        3300
+      ]
+    },
+    {
+      "name": "Building 2",
+      "location": [
+        0.0,
+        3400.0
+      ],
+      "dimensions": [
+        600,
+        850
+      ]
+    },
+    {
+      "name": "Building 3",
+      "location": [
+        2800.0,
+        0.0
+      ],
+      "dimensions": [
+        1500,
+        2450
+      ]
+    },
+    {
+      "name": "Building 4",
+      "location": [
+        4900.0,
+        0.0
+      ],
+      "dimensions": [
+        400,
+        750
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "Path 1",
+      "length": 2191.603294394312,
+      "connected_buildings": [
+        "Building 1",
+        "Building 2"
+      ]
+    },
+    {
+      "name": "Path 2",
+      "length": 5911.21814857141,
+      "connected_buildings": [
+        "Building 3",
+        "Building 4"
+      ]
+    }
+  ],
+  "total_area": 54900000.0,
+  "objectives": {
+    "objective_1": 4205.1066912876395,
+    "objective_2": 41175000.0
+  }
+}
